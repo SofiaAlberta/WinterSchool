@@ -46,78 +46,105 @@
         .header::before {
             content: '';
             position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 400px;
-            height: 400px;
-            background: url('https://drive.google.com/thumbnail?id=183GV1cj4b79B1fv6X3p2KjU0XNQiP2XP&sz=w600') center/contain no-repeat;
-            opacity: 0.2;
-            border-radius: 50%;
-            pointer-events: none;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(135deg, rgba(15, 30, 60, 0.95) 0%, rgba(25, 45, 80, 0.95) 100%);
             z-index: 0;
         }
         
-        .spheroid-echo {
+        .spheroid-half-left,
+        .spheroid-half-right {
             position: absolute;
             top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            background: url('https://drive.google.com/thumbnail?id=183GV1cj4b79B1fv6X3p2KjU0XNQiP2XP&sz=w600') center/contain no-repeat;
-            border-radius: 50%;
+            transform: translateY(-50%);
+            width: 50%;
+            height: 100%;
+            background-size: cover;
+            background-repeat: no-repeat;
             pointer-events: none;
             z-index: 0;
         }
         
-        .echo-1 {
-            width: 550px;
-            height: 550px;
-            opacity: 0.14;
-            filter: blur(2px);
+        .spheroid-half-left {
+            left: 0;
+            background-image: url('https://drive.google.com/thumbnail?id=183GV1cj4b79B1fv6X3p2KjU0XNQiP2XP&sz=w600');
+            background-position: right center;
+            clip-path: polygon(0 0, 50% 0, 50% 100%, 0 100%);
         }
         
-        .echo-2 {
-            width: 750px;
-            height: 750px;
-            opacity: 0.09;
-            filter: blur(3px);
+        .spheroid-half-right {
+            right: 0;
+            background-image: url('https://drive.google.com/thumbnail?id=183GV1cj4b79B1fv6X3p2KjU0XNQiP2XP&sz=w600');
+            background-position: left center;
+            clip-path: polygon(50% 0, 100% 0, 100% 100%, 50% 100%);
         }
         
-        .echo-3 {
-            width: 1000px;
-            height: 1000px;
-            opacity: 0.05;
-            filter: blur(5px);
+        .echo-layer-left,
+        .echo-layer-right {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            height: 100%;
+            background-size: cover;
+            background-repeat: no-repeat;
+            pointer-events: none;
         }
         
-        .echo-4 {
-            width: 1300px;
-            height: 1300px;
-            opacity: 0.03;
-            filter: blur(7px);
+        .echo-layer-left {
+            left: 0;
+            background-image: url('https://drive.google.com/thumbnail?id=183GV1cj4b79B1fv6X3p2KjU0XNQiP2XP&sz=w600');
+            background-position: right center;
+        }
+        
+        .echo-layer-right {
+            right: 0;
+            background-image: url('https://drive.google.com/thumbnail?id=183GV1cj4b79B1fv6X3p2KjU0XNQiP2XP&sz=w600');
+            background-position: left center;
+        }
+        
+        .echo-1-left { width: 30%; opacity: 0.15; filter: blur(1px); z-index: 1; }
+        .echo-1-right { width: 30%; opacity: 0.15; filter: blur(1px); z-index: 1; }
+        
+        .echo-2-left { width: 40%; opacity: 0.11; filter: blur(2px); z-index: 2; }
+        .echo-2-right { width: 40%; opacity: 0.11; filter: blur(2px); z-index: 2; }
+        
+        .echo-3-left { width: 50%; opacity: 0.08; filter: blur(3px); z-index: 3; }
+        .echo-3-right { width: 50%; opacity: 0.08; filter: blur(3px); z-index: 3; }
+        
+        .echo-4-left { width: 60%; opacity: 0.05; filter: blur(5px); z-index: 4; }
+        .echo-4-right { width: 60%; opacity: 0.05; filter: blur(5px); z-index: 4; }
+        
+        .echo-5-left { width: 70%; opacity: 0.03; filter: blur(7px); z-index: 5; }
+        .echo-5-right { width: 70%; opacity: 0.03; filter: blur(7px); z-index: 5; }
+        
+        .header-content {
+            position: relative;
+            z-index: 10;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 20px;
         }
         
         .header h1 {
             font-size: 2.5em;
             margin-bottom: 10px;
             font-weight: 600;
-            position: relative;
-            z-index: 1;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
         }
         
         .header .subtitle {
             font-size: 1.3em;
             opacity: 0.95;
             margin-bottom: 20px;
-            position: relative;
-            z-index: 1;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
         }
         
         .header .location {
             font-size: 1.1em;
             opacity: 0.9;
-            position: relative;
-            z-index: 1;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
         }
         
         .container {
@@ -240,6 +267,14 @@
         @media (max-width: 600px) {
             .info-grid {
                 grid-template-columns: 1fr;
+            }
+            
+            .header h1 {
+                font-size: 1.8em;
+            }
+            
+            .header .subtitle {
+                font-size: 1.1em;
             }
         }
         
@@ -468,13 +503,22 @@
 </head>
 <body>
     <div class="header">
-        <div class="spheroid-echo echo-4"></div>
-        <div class="spheroid-echo echo-3"></div>
-        <div class="spheroid-echo echo-2"></div>
-        <div class="spheroid-echo echo-1"></div>
-        <h1>ADVANCED IN VITRO MODELS:<br>SPHEROIDS AND ORGANOIDS</h1>
-        <div class="subtitle">Development, Applications and Imaging</div>
-        <div class="location">January 12-16, 2026 | Bologna, Italy</div>
+        <div class="echo-layer-left echo-5-left"></div>
+        <div class="echo-layer-right echo-5-right"></div>
+        <div class="echo-layer-left echo-4-left"></div>
+        <div class="echo-layer-right echo-4-right"></div>
+        <div class="echo-layer-left echo-3-left"></div>
+        <div class="echo-layer-right echo-3-right"></div>
+        <div class="echo-layer-left echo-2-left"></div>
+        <div class="echo-layer-right echo-2-right"></div>
+        <div class="echo-layer-left echo-1-left"></div>
+        <div class="echo-layer-right echo-1-right"></div>
+        
+        <div class="header-content">
+            <h1>ADVANCED IN VITRO MODELS:<br>SPHEROIDS AND ORGANOIDS</h1>
+            <div class="subtitle">Development, Applications and Imaging</div>
+            <div class="location">January 12-16, 2026 | Bologna, Italy</div>
+        </div>
     </div>
     
     <div class="container">
@@ -547,8 +591,6 @@
                 <p style="font-size: 1.1em; margin-bottom: 10px;"><strong>Application Deadline: December 15th, 2025</strong></p>
                 <a href="https://www.unibo.it/en/study/phd-professional-masters-specialisation-schools-and-other-programmes/summer-and-winter-schools/2025/advanced-in-vitro-models-spheroids-and-organoids-development-applications-and-imaging" class="cta-button" target="_blank">Register Now</a>
             </div>
-            
-
         </div>
         
         <div class="section">
