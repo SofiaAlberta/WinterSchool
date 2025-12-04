@@ -34,66 +34,67 @@
         }
         
         .header {
-            background: linear-gradient(135deg, rgba(30, 60, 114, 0.75) 0%, rgba(42, 82, 152, 0.75) 100%), 
-                        url('https://drive.google.com/thumbnail?id=183GV1cj4b79B1fv6X3p2KjU0XNQiP2XP&sz=w1200') center/cover;
+            background: linear-gradient(135deg, rgba(30, 60, 114, 0.85) 0%, rgba(42, 82, 152, 0.85) 100%);
             color: white;
             padding: 60px 20px;
             text-align: center;
             position: relative;
             overflow: hidden;
-            min-height: 300px;
+            min-height: 320px;
         }
         
         .header::before {
             content: '';
             position: absolute;
-            top: -15%;
-            left: -8%;
-            width: 400px;
-            height: 400px;
-            background: url('https://drive.google.com/thumbnail?id=183GV1cj4b79B1fv6X3p2KjU0XNQiP2XP&sz=w500') center/contain no-repeat;
-            opacity: 0.3;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 500px;
+            height: 500px;
+            background: url('https://drive.google.com/thumbnail?id=183GV1cj4b79B1fv6X3p2KjU0XNQiP2XP&sz=w600') center/contain no-repeat;
+            opacity: 0.15;
             border-radius: 50%;
             pointer-events: none;
-            filter: blur(1px);
+            z-index: 0;
         }
         
-        .header::after {
-            content: '';
+        .spheroid-echo {
             position: absolute;
-            bottom: -20%;
-            right: -10%;
-            width: 450px;
-            height: 450px;
-            background: url('https://drive.google.com/thumbnail?id=183GV1cj4b79B1fv6X3p2KjU0XNQiP2XP&sz=w500') center/contain no-repeat;
-            opacity: 0.28;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: url('https://drive.google.com/thumbnail?id=183GV1cj4b79B1fv6X3p2KjU0XNQiP2XP&sz=w600') center/contain no-repeat;
             border-radius: 50%;
             pointer-events: none;
-            filter: blur(1px);
+            z-index: 0;
         }
         
-        .spheroid-decoration {
-            position: absolute;
-            background: url('https://drive.google.com/thumbnail?id=183GV1cj4b79B1fv6X3p2KjU0XNQiP2XP&sz=w400') center/contain no-repeat;
-            border-radius: 50%;
-            pointer-events: none;
-            filter: blur(1.5px);
+        .echo-1 {
+            width: 600px;
+            height: 600px;
+            opacity: 0.12;
+            filter: blur(2px);
         }
         
-        .spheroid-small-1 {
-            top: 25%;
-            right: 12%;
-            width: 180px;
-            height: 180px;
-            opacity: 0.25;
+        .echo-2 {
+            width: 700px;
+            height: 700px;
+            opacity: 0.08;
+            filter: blur(3px);
         }
         
-        .spheroid-small-2 {
-            bottom: 15%;
-            left: 8%;
-            width: 200px;
-            height: 200px;
-            opacity: 0.22;
+        .echo-3 {
+            width: 800px;
+            height: 800px;
+            opacity: 0.05;
+            filter: blur(4px);
+        }
+        
+        .echo-4 {
+            width: 900px;
+            height: 900px;
+            opacity: 0.03;
+            filter: blur(5px);
         }
         
         .header h1 {
@@ -240,16 +241,17 @@
             display: inline-block;
             background: #2a5298;
             color: white;
-            padding: 15px 40px;
+            padding: 12px 35px;
             text-decoration: none;
             border-radius: 5px;
-            font-size: 1.2em;
-            margin-top: 20px;
-            transition: background 0.3s;
+            font-size: 1.1em;
+            margin-top: 15px;
+            transition: background 0.3s, transform 0.2s;
         }
         
         .cta-button:hover {
             background: #1e3c72;
+            transform: translateY(-2px);
         }
         
         .review-form {
@@ -408,9 +410,9 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            gap: 50px;
+            gap: 40px;
             flex-wrap: wrap;
-            margin-top: 30px;
+            margin-top: 25px;
         }
         
         .logo-item {
@@ -418,8 +420,8 @@
         }
         
         .logo-item img {
-            max-height: 100px;
-            max-width: 200px;
+            max-height: 80px;
+            max-width: 180px;
             object-fit: contain;
             transition: transform 0.3s;
         }
@@ -436,8 +438,8 @@
         
         .footer-logo {
             text-align: center;
-            margin: 40px 0 20px;
-            padding: 30px;
+            margin: 35px 0 20px;
+            padding: 25px;
             background: white;
             border-radius: 8px;
         }
@@ -447,7 +449,7 @@
         }
         
         .footer-logo img {
-            max-width: 350px;
+            max-width: 300px;
             width: 100%;
             height: auto;
         }
@@ -455,8 +457,10 @@
 </head>
 <body>
     <div class="header">
-        <div class="spheroid-decoration spheroid-small-1"></div>
-        <div class="spheroid-decoration spheroid-small-2"></div>
+        <div class="spheroid-echo echo-4"></div>
+        <div class="spheroid-echo echo-3"></div>
+        <div class="spheroid-echo echo-2"></div>
+        <div class="spheroid-echo echo-1"></div>
         <h1>ADVANCED IN VITRO MODELS:<br>SPHEROIDS AND ORGANOIDS</h1>
         <div class="subtitle">Development, Applications and Imaging</div>
         <div class="location">January 12-16, 2026 | Bologna, Italy</div>
