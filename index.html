@@ -183,13 +183,13 @@
         
         .info-grid {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 25px;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 20px;
             margin-top: 30px;
         }
         
         .info-box {
-            padding: 25px 15px;
+            padding: 20px 12px;
             background: linear-gradient(135deg, #e9f2ff 0%, #f5f8ff 100%);
             border-radius: 10px;
             text-align: center;
@@ -205,24 +205,30 @@
         
         .info-box h3 {
             color: #1e3c72;
-            margin-bottom: 12px;
-            font-size: 0.85em;
+            margin-bottom: 10px;
+            font-size: 0.8em;
             text-transform: uppercase;
             letter-spacing: 0.5px;
             font-weight: 600;
         }
         
         .info-box .value {
-            font-size: 1.8em;
+            font-size: 1.6em;
             font-weight: 700;
             color: #2a5298;
-            margin: 8px 0;
+            margin: 6px 0;
         }
         
         .info-box .icon {
-            font-size: 2em;
-            margin-bottom: 8px;
+            font-size: 1.8em;
+            margin-bottom: 6px;
             opacity: 0.7;
+        }
+        
+        @media (max-width: 1000px) {
+            .info-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
         }
         
         @media (max-width: 900px) {
@@ -529,11 +535,6 @@
                     <div class="icon">🎓</div>
                     <h3>Credits</h3>
                     <div class="value">5 CFU</div>
-                </div>
-                <div class="info-box">
-                    <div class="icon">✓</div>
-                    <h3>Attendance Required</h3>
-                    <div class="value">75%</div>
                 </div>
             </div>
             
