@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="it">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,10 +12,10 @@
         }
         
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Georgia', 'Times New Roman', serif;
             line-height: 1.6;
             color: #333;
-            background: #f8f9fa;
+            background: #f5f5f5;
             position: relative;
         }
         
@@ -27,14 +27,14 @@
             width: 100%;
             height: 100%;
             background-image: 
-                radial-gradient(circle at 20% 30%, rgba(106, 90, 205, 0.08) 0%, transparent 50%),
-                radial-gradient(circle at 80% 70%, rgba(65, 105, 225, 0.08) 0%, transparent 50%);
+                radial-gradient(circle at 20% 30%, rgba(181, 23, 45, 0.03) 0%, transparent 50%),
+                radial-gradient(circle at 80% 70%, rgba(181, 23, 45, 0.03) 0%, transparent 50%);
             pointer-events: none;
             z-index: 0;
         }
         
         .header {
-            background: linear-gradient(135deg, rgba(15, 30, 60, 0.88) 0%, rgba(25, 45, 80, 0.88) 100%);
+            background: linear-gradient(135deg, rgba(20, 20, 25, 0.75) 0%, rgba(35, 35, 40, 0.75) 100%);
             color: white;
             padding: 60px 20px;
             text-align: center;
@@ -43,50 +43,12 @@
             min-height: 320px;
         }
         
-        .header::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            background: linear-gradient(135deg, rgba(15, 30, 60, 0.95) 0%, rgba(25, 45, 80, 0.95) 100%);
-            z-index: 0;
-        }
-        
-        .spheroid-half-left,
-        .spheroid-half-right {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            width: 50%;
-            height: 100%;
-            background-size: cover;
-            background-repeat: no-repeat;
-            pointer-events: none;
-            z-index: 0;
-        }
-        
-        .spheroid-half-left {
-            left: 0;
-            background-image: url('https://drive.google.com/thumbnail?id=183GV1cj4b79B1fv6X3p2KjU0XNQiP2XP&sz=w600');
-            background-position: right center;
-            clip-path: polygon(0 0, 50% 0, 50% 100%, 0 100%);
-        }
-        
-        .spheroid-half-right {
-            right: 0;
-            background-image: url('https://drive.google.com/thumbnail?id=183GV1cj4b79B1fv6X3p2KjU0XNQiP2XP&sz=w600');
-            background-position: left center;
-            clip-path: polygon(50% 0, 100% 0, 100% 100%, 50% 100%);
-        }
-        
         .echo-layer-left,
         .echo-layer-right {
             position: absolute;
             top: 50%;
             transform: translateY(-50%);
-            height: 100%;
+            height: 120%;
             background-size: cover;
             background-repeat: no-repeat;
             pointer-events: none;
@@ -104,20 +66,94 @@
             background-position: left center;
         }
         
-        .echo-1-left { width: 30%; opacity: 0.15; filter: blur(1px); z-index: 1; }
-        .echo-1-right { width: 30%; opacity: 0.15; filter: blur(1px); z-index: 1; }
+        .echo-1-left { 
+            width: 35%; 
+            opacity: 0.45; 
+            filter: blur(0px); 
+            z-index: 1;
+        }
+        .echo-1-right { 
+            width: 35%; 
+            opacity: 0.45; 
+            filter: blur(0px); 
+            z-index: 1;
+        }
         
-        .echo-2-left { width: 40%; opacity: 0.11; filter: blur(2px); z-index: 2; }
-        .echo-2-right { width: 40%; opacity: 0.11; filter: blur(2px); z-index: 2; }
+        .echo-2-left { 
+            width: 38%; 
+            opacity: 0.35; 
+            filter: blur(1px); 
+            z-index: 2;
+        }
+        .echo-2-right { 
+            width: 38%; 
+            opacity: 0.35; 
+            filter: blur(1px); 
+            z-index: 2;
+        }
         
-        .echo-3-left { width: 50%; opacity: 0.08; filter: blur(3px); z-index: 3; }
-        .echo-3-right { width: 50%; opacity: 0.08; filter: blur(3px); z-index: 3; }
+        .echo-3-left { 
+            width: 41%; 
+            opacity: 0.25; 
+            filter: blur(2px); 
+            z-index: 3;
+        }
+        .echo-3-right { 
+            width: 41%; 
+            opacity: 0.25; 
+            filter: blur(2px); 
+            z-index: 3;
+        }
         
-        .echo-4-left { width: 60%; opacity: 0.05; filter: blur(5px); z-index: 4; }
-        .echo-4-right { width: 60%; opacity: 0.05; filter: blur(5px); z-index: 4; }
+        .echo-4-left { 
+            width: 44%; 
+            opacity: 0.18; 
+            filter: blur(3px); 
+            z-index: 4;
+        }
+        .echo-4-right { 
+            width: 44%; 
+            opacity: 0.18; 
+            filter: blur(3px); 
+            z-index: 4;
+        }
         
-        .echo-5-left { width: 70%; opacity: 0.03; filter: blur(7px); z-index: 5; }
-        .echo-5-right { width: 70%; opacity: 0.03; filter: blur(7px); z-index: 5; }
+        .echo-5-left { 
+            width: 47%; 
+            opacity: 0.12; 
+            filter: blur(4px); 
+            z-index: 5;
+        }
+        .echo-5-right { 
+            width: 47%; 
+            opacity: 0.12; 
+            filter: blur(4px); 
+            z-index: 5;
+        }
+        
+        .echo-6-left { 
+            width: 50%; 
+            opacity: 0.08; 
+            filter: blur(6px); 
+            z-index: 6;
+        }
+        .echo-6-right { 
+            width: 50%; 
+            opacity: 0.08; 
+            filter: blur(6px); 
+            z-index: 6;
+        }
+        
+        .header-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(ellipse at center, rgba(20, 20, 25, 0.5) 0%, rgba(20, 20, 25, 0.1) 60%, transparent 100%);
+            z-index: 7;
+            pointer-events: none;
+        }
         
         .header-content {
             position: relative;
@@ -125,26 +161,30 @@
             max-width: 900px;
             margin: 0 auto;
             padding: 0 20px;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
         }
         
         .header h1 {
+            font-family: 'Georgia', 'Times New Roman', serif;
             font-size: 2.5em;
             margin-bottom: 10px;
-            font-weight: 600;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+            font-weight: 400;
+            letter-spacing: 0.5px;
         }
         
         .header .subtitle {
+            font-family: 'Georgia', 'Times New Roman', serif;
             font-size: 1.3em;
             opacity: 0.95;
             margin-bottom: 20px;
-            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+            font-weight: 300;
         }
         
         .header .location {
+            font-family: 'Georgia', 'Times New Roman', serif;
             font-size: 1.1em;
             opacity: 0.9;
-            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+            font-weight: 300;
         }
         
         .container {
@@ -159,22 +199,26 @@
             background: rgba(255, 255, 255, 0.95);
             margin: 25px 0;
             padding: 35px 40px;
-            border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            border-radius: 0;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
             backdrop-filter: blur(10px);
         }
         
         .section h2 {
-            color: #1e3c72;
+            font-family: 'Georgia', 'Times New Roman', serif;
+            color: #b5172d;
             margin-bottom: 20px;
             font-size: 1.8em;
-            border-bottom: 2px solid #2a5298;
+            font-weight: 400;
+            border-bottom: 1px solid #b5172d;
             padding-bottom: 8px;
         }
         
         .section p {
+            font-family: 'Georgia', 'Times New Roman', serif;
             margin-bottom: 15px;
-            line-height: 1.7;
+            line-height: 1.8;
+            color: #333;
         }
         
         .highlights {
@@ -186,9 +230,9 @@
         
         .highlight-card {
             padding: 20px;
-            background: #f8f9fa;
-            border-left: 3px solid #2a5298;
-            border-radius: 4px;
+            background: #fafafa;
+            border-left: 3px solid #b5172d;
+            border-radius: 0;
             transition: transform 0.2s;
         }
         
@@ -197,15 +241,19 @@
         }
         
         .highlight-card h3 {
-            color: #1e3c72;
+            font-family: 'Georgia', 'Times New Roman', serif;
+            color: #b5172d;
             margin-bottom: 10px;
             font-size: 1.15em;
+            font-weight: 400;
         }
         
         .highlight-card p {
+            font-family: 'Georgia', 'Times New Roman', serif;
             font-size: 0.95em;
-            line-height: 1.6;
+            line-height: 1.7;
             margin: 0;
+            color: #333;
         }
         
         .info-grid {
@@ -217,32 +265,34 @@
         
         .info-box {
             padding: 20px 12px;
-            background: linear-gradient(135deg, #e9f2ff 0%, #f5f8ff 100%);
-            border-radius: 10px;
+            background: #fafafa;
+            border-radius: 0;
             text-align: center;
-            box-shadow: 0 3px 12px rgba(30, 60, 114, 0.08);
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
             transition: transform 0.3s, box-shadow 0.3s;
-            border: 1px solid rgba(42, 82, 152, 0.1);
+            border: 1px solid #e0e0e0;
         }
         
         .info-box:hover {
             transform: translateY(-3px);
-            box-shadow: 0 5px 18px rgba(30, 60, 114, 0.12);
+            box-shadow: 0 3px 8px rgba(0,0,0,0.15);
         }
         
         .info-box h3 {
-            color: #1e3c72;
+            font-family: 'Georgia', 'Times New Roman', serif;
+            color: #b5172d;
             margin-bottom: 10px;
             font-size: 0.8em;
             text-transform: uppercase;
             letter-spacing: 0.5px;
-            font-weight: 600;
+            font-weight: 400;
         }
         
         .info-box .value {
+            font-family: 'Georgia', 'Times New Roman', serif;
             font-size: 1.6em;
-            font-weight: 700;
-            color: #2a5298;
+            font-weight: 400;
+            color: #333;
             margin: 6px 0;
         }
         
@@ -279,41 +329,45 @@
         }
         
         .cta-button {
+            font-family: 'Georgia', 'Times New Roman', serif;
             display: inline-block;
-            background: #2a5298;
+            background: #b5172d;
             color: white;
             padding: 12px 35px;
             text-decoration: none;
-            border-radius: 5px;
+            border-radius: 0;
             font-size: 1.1em;
             margin-top: 15px;
             transition: background 0.3s, transform 0.2s;
+            font-weight: 400;
         }
         
         .cta-button:hover {
-            background: #1e3c72;
+            background: #8c1223;
             transform: translateY(-2px);
         }
         
         .review-form {
-            background: #f8f9fa;
+            background: #fafafa;
             padding: 25px;
-            border-radius: 6px;
+            border-radius: 0;
             margin-top: 25px;
         }
         
         .review-form h3 {
+            font-family: 'Georgia', 'Times New Roman', serif;
             font-size: 1.1em;
+            font-weight: 400;
         }
         
         .review-form input,
         .review-form textarea {
+            font-family: 'Georgia', 'Times New Roman', serif;
             width: 100%;
             padding: 10px;
             margin: 8px 0;
             border: 1px solid #ddd;
-            border-radius: 4px;
-            font-family: inherit;
+            border-radius: 0;
             font-size: 0.95em;
         }
         
@@ -323,19 +377,21 @@
         }
         
         .review-form button {
-            background: #2a5298;
+            font-family: 'Georgia', 'Times New Roman', serif;
+            background: #b5172d;
             color: white;
             padding: 10px 25px;
             border: none;
-            border-radius: 4px;
+            border-radius: 0;
             cursor: pointer;
             font-size: 0.95em;
             margin-top: 8px;
             transition: background 0.3s;
+            font-weight: 400;
         }
         
         .review-form button:hover {
-            background: #1e3c72;
+            background: #8c1223;
         }
         
         .rating-input {
@@ -362,8 +418,8 @@
             background: white;
             padding: 18px;
             margin: 12px 0;
-            border-radius: 6px;
-            border-left: 3px solid #2a5298;
+            border-radius: 0;
+            border-left: 3px solid #b5172d;
             font-size: 0.95em;
         }
         
@@ -375,8 +431,9 @@
         }
         
         .review-name {
-            font-weight: 600;
-            color: #1e3c72;
+            font-family: 'Georgia', 'Times New Roman', serif;
+            font-weight: 400;
+            color: #b5172d;
         }
         
         .review-rating {
@@ -392,57 +449,40 @@
         }
         
         .learning-outcomes li {
+            font-family: 'Georgia', 'Times New Roman', serif;
             padding: 12px 15px 12px 35px;
             position: relative;
-            background: #f8f9fa;
-            border-radius: 4px;
+            background: #fafafa;
+            border-radius: 0;
             font-size: 0.95em;
-            line-height: 1.6;
+            line-height: 1.7;
+            color: #333;
         }
         
         .learning-outcomes li:before {
             content: "✓";
             position: absolute;
             left: 12px;
-            color: #2a5298;
+            color: #b5172d;
             font-weight: bold;
             font-size: 1.1em;
-        }
-        
-        .decorative-spheroid {
-            position: absolute;
-            opacity: 0.15;
-            pointer-events: none;
-            z-index: 0;
-        }
-        
-        .spheroid-1 {
-            top: 100px;
-            right: -100px;
-            width: 300px;
-            height: 300px;
-        }
-        
-        .spheroid-2 {
-            bottom: 200px;
-            left: -80px;
-            width: 250px;
-            height: 250px;
         }
         
         .endorsement-section {
             background: white;
             padding: 35px 40px;
             margin: 25px 0;
-            border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            border-radius: 0;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
         }
         
         .endorsement-section h2 {
-            color: #1e3c72;
+            font-family: 'Georgia', 'Times New Roman', serif;
+            color: #b5172d;
             margin-bottom: 25px;
             font-size: 1.8em;
-            border-bottom: 2px solid #2a5298;
+            font-weight: 400;
+            border-bottom: 1px solid #b5172d;
             padding-bottom: 8px;
             text-align: center;
         }
@@ -477,6 +517,7 @@
         }
         
         .logo-item p {
+            font-family: 'Georgia', 'Times New Roman', serif;
             margin-top: 10px;
             color: #666;
             font-size: 0.9em;
@@ -487,7 +528,7 @@
             margin: 35px 0 20px;
             padding: 25px;
             background: white;
-            border-radius: 8px;
+            border-radius: 0;
         }
         
         .footer-logo a {
@@ -503,6 +544,8 @@
 </head>
 <body>
     <div class="header">
+        <div class="echo-layer-left echo-6-left"></div>
+        <div class="echo-layer-right echo-6-right"></div>
         <div class="echo-layer-left echo-5-left"></div>
         <div class="echo-layer-right echo-5-right"></div>
         <div class="echo-layer-left echo-4-left"></div>
@@ -513,6 +556,8 @@
         <div class="echo-layer-right echo-2-right"></div>
         <div class="echo-layer-left echo-1-left"></div>
         <div class="echo-layer-right echo-1-right"></div>
+        
+        <div class="header-overlay"></div>
         
         <div class="header-content">
             <h1>ADVANCED IN VITRO MODELS:<br>SPHEROIDS AND ORGANOIDS</h1>
@@ -598,7 +643,7 @@
             <p>Share your experience and help future students make an informed decision!</p>
             
             <div class="review-form">
-                <h3 style="color: #1e3c72; margin-bottom: 15px;">Leave a Review</h3>
+                <h3 style="color: #b5172d; margin-bottom: 15px;">Leave a Review</h3>
                 <input type="text" id="reviewName" placeholder="Your Name" required>
                 <div>
                     <label style="display: block; margin: 10px 0 5px;">Rating:</label>
@@ -620,10 +665,10 @@
         </div>
         
         <div class="footer-logo">
-            <a href="https://dibinem.unibo.it/it/con-societa-e-impresa/enti-e-imprese/centro-di-ricerca-per-la-medicina-di-precisione" target="_blank" style="display: flex; align-items: center; justify-content: center; gap: 20px; text-decoration: none;">
+            <a href="https://dibinem.unibo.it/it/con-societa-e-imprese/enti-e-imprese/centro-di-ricerca-per-la-medicina-di-precisione" target="_blank" style="display: flex; align-items: center; justify-content: center; gap: 20px; text-decoration: none;">
                 <img id="precisionMedicineLogo" src="https://drive.google.com/thumbnail?id=1lDymG5KNMGd7lxol5Doa4R0ZQIb4vBFX&sz=w400" alt="Centro di Ricerca per la Medicina di Precisione" style="max-height: 120px; max-width: 200px; object-fit: contain;" onerror="this.style.display='none';">
                 <div>
-                    <p style="color: #1e3c72; font-size: 1.3em; font-weight: 600; margin: 0;">Centro di Ricerca per la Medicina di Precisione</p>
+                    <p style="color: #b5172d; font-size: 1.3em; font-weight: 400; margin: 0;">Centro di Ricerca per la Medicina di Precisione</p>
                     <p style="color: #666; margin: 5px 0 0 0;">University of Bologna</p>
                 </div>
             </a>
@@ -634,29 +679,29 @@
             <div class="logos-container">
                 <div class="logo-item logo-ior">
                     <img src="https://drive.google.com/thumbnail?id=17rroJm_kh7mkRNOjbJcTDXTqbYI1C4Pn&sz=w800" alt="IRCCS Istituto Ortopedico Rizzoli" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
-                    <div style="display: none; padding: 15px; background: #f0f0f0; border-radius: 6px; max-width: 200px;">
-                        <p style="color: #1e3c72; font-weight: 600;">IOR</p>
+                    <div style="display: none; padding: 15px; background: #f0f0f0; border-radius: 0; max-width: 200px;">
+                        <p style="color: #b5172d; font-weight: 400;">IOR</p>
                         <p style="font-size: 0.85em;">Istituto Ortopedico Rizzoli</p>
                     </div>
                 </div>
                 <div class="logo-item">
                     <img src="https://drive.google.com/thumbnail?id=1VuRVN0w7tfCH__pUSSP4GPG2FdXgftCP&sz=w400" alt="AIRC - Fondazione Italiana per la Ricerca sul Cancro" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
-                    <div style="display: none; padding: 15px; background: #f0f0f0; border-radius: 6px; max-width: 200px;">
-                        <p style="color: #1e3c72; font-weight: 600;">AIRC</p>
+                    <div style="display: none; padding: 15px; background: #f0f0f0; border-radius: 0; max-width: 200px;">
+                        <p style="color: #b5172d; font-weight: 400;">AIRC</p>
                         <p style="font-size: 0.85em;">Fondazione Italiana per la Ricerca sul Cancro</p>
                     </div>
                 </div>
                 <div class="logo-item">
                     <img src="https://drive.google.com/thumbnail?id=1Es15cX-gedHn8Zwj4NVYSCtOnDbir0lZ&sz=w400" alt="ESB - European Society for Biomaterials" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
-                    <div style="display: none; padding: 15px; background: #f0f0f0; border-radius: 6px; max-width: 200px;">
-                        <p style="color: #1e3c72; font-weight: 600;">ESB</p>
+                    <div style="display: none; padding: 15px; background: #f0f0f0; border-radius: 0; max-width: 200px;">
+                        <p style="color: #b5172d; font-weight: 400;">ESB</p>
                         <p style="font-size: 0.85em;">European Society for Biomaterials</p>
                     </div>
                 </div>
                 <div class="logo-item">
                     <img src="https://drive.google.com/thumbnail?id=1BLGhcDJT0SLY0xXEKesqeOSwRcRH3C7t&sz=w400" alt="King's College London" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
-                    <div style="display: none; padding: 15px; background: #f0f0f0; border-radius: 6px; max-width: 200px;">
-                        <p style="color: #1e3c72; font-weight: 600;">King's College London</p>
+                    <div style="display: none; padding: 15px; background: #f0f0f0; border-radius: 0; max-width: 200px;">
+                        <p style="color: #b5172d; font-weight: 400;">King's College London</p>
                     </div>
                 </div>
             </div>
